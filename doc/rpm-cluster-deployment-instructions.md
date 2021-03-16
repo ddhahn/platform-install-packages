@@ -426,10 +426,8 @@ Then, if needed, to restore the Kaltura server, follow these steps:
 * Copy over the web and configurations directories
 * Import the MySQL dump
 * Restart all services
-* Reindex Sphinx with the following commands: 
+* Reindex Sphinx with the following command: 
 
 ```
-# rm -f /opt/kaltura/log/sphinx/data/*
-# cd /opt/kaltura/app/deployment/base/scripts/
-# for i in populateSphinx*;do php $i >/tmp/$.log;done
+#/opt/kaltura/bin/kaltura-sphinx-reindex.sh
 ```
